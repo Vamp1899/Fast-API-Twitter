@@ -1,0 +1,4 @@
+Schema is used to take data in what format for post request
+Model is the DB table
+main request gets passed to model after converting pydantic input to dict and validating
+psycopg - Database driver for postgresql to execute queries directly from code without using ORM -> cursor.execute("""SELECT * FROM products """)
