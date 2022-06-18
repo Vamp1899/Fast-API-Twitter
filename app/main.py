@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import post, user, auth, vote
+from func import post, user, auth, vote
 """#Used for CORS in Web
 #fetch('http://localhost:8000 ').then(res => res.json()).then(console.log)
 #This will generate table if we don't have alembic setted up from scratch
