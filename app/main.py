@@ -1,6 +1,6 @@
+import routers as routers
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import routers
 from routers import post, user, auth, vote
 """#Used for CORS in Web
 #fetch('http://localhost:8000 ').then(res => res.json()).then(console.log)
@@ -36,10 +36,10 @@ def find_index_post(id):
 #app Decorator in this case converts it from simple function to API path operation
 
 
-app.include_router(routers.user.router)
-app.include_router(routers.post.router)
-app.include_router(routers.auth.router)
-app.include_router(routers.vote.router)
+app.include_router(user.router)
+app.include_router(post.router)
+app.include_router(auth.router)
+app.include_router(vote.router)
 
 @app.get("/")
 def homepage():
