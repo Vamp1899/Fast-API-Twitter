@@ -1,13 +1,5 @@
 from fastapi import FastAPI ,Response ,status ,HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.params import Body
-from typing import Optional , List
-import utils
-from random import randrange
-from sqlalchemy.orm import Session
-import models
-import schemas
-from database import engine, get_db
 from routers import post, user, auth, vote
 #Used for CORS in Web
 #fetch('http://localhost:8000 ').then(res => res.json()).then(console.log)
