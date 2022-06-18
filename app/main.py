@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from func import post, user, auth, vote
+#from func import post, user, auth, vote
+import func.auth , func.post , func.vote, func.user
 """#Used for CORS in Web
 #fetch('http://localhost:8000 ').then(res => res.json()).then(console.log)
 #This will generate table if we don't have alembic setted up from scratch
@@ -35,10 +36,10 @@ def find_index_post(id):
 #app Decorator in this case converts it from simple function to API path operation
 
 
-app.include_router(user.router)
-app.include_router(post.router)
-app.include_router(auth.router)
-app.include_router(vote.router)
+app.include_router(func.user.router)
+app.include_router(func.post.router)
+app.include_router(func.auth.router)
+app.include_router(func.vote.router)
 
 @app.get("/")
 def homepage():
