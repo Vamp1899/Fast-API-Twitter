@@ -41,7 +41,7 @@ app.include_router(func.post.router)
 app.include_router(func.auth.router)
 app.include_router(func.vote.router)
 
-@app.get("/")
+@app.get("https://radiant-falls-91367.herokuapp.com/")
 def homepage():
     return {"message": "Hello Nikunj"}
 
